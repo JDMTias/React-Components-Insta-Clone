@@ -8,11 +8,8 @@ import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 const LikeSection = (props) => {
   const { likesData } = props;
 
-  let [upLike, setUpLike] = useState(0);
+  let [upLike, setUpLike] = useState(likesData);
 
-  upLike = likesData.map((numLikes) => {
-    return numLikes.likes;
-  });
 
   function addLike() {
     setUpLike(upLike + 1);
@@ -28,7 +25,7 @@ const LikeSection = (props) => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">{upLike}Likes</p>
+      <p className="like-number">{upLike} Likes</p>
     </div>
   );
 };
