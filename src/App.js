@@ -13,8 +13,12 @@ import PostsPage from "../src/components/PostsContainer/PostsPage";
 import SearchBar from "../src/components/SearchBar/SearchBarContainer";
 import dummyData from "./dummy-data";
 
+let data, setData;
+
+
+
 const App = () => {
-  const [data, setData] = useState(dummyData)
+  [data, setData] = useState(dummyData)
 
   return (
     <div className="App">
@@ -24,5 +28,5 @@ const App = () => {
     </div>
   );
 };
-
+export {data, setData}
 export default App;

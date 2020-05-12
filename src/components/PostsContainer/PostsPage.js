@@ -15,7 +15,7 @@ const PostsPage = (props) => {
       {/* map through data here to return a Post and pass data as props to Post */}
       
       {postData.map((postObj) => {
-        return <Post post={postObj}/>
+        return <Post key={postObj.username} post={postObj}/>
       })}
 
       
